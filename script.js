@@ -1,16 +1,16 @@
 // console.log("hello world")
 let curIdx=0;
-let audioElement=new Audio('/song/_ Heer Ranjha(PagalWorld.com.se).mp3');
+let audioElement=new Audio('song/_ Heer Ranjha(PagalWorld.com.se).mp3');
 let masterplay=document.getElementById('masterPlay');
 let myProgressBar=document.getElementById('myProgressBar');
 let gif=document.getElementById('gif');
 let songItem=Array.from(document.getElementsByClassName('songitem'));
 
 let songs=[
-    {songIndex:0,songName:"_ Heer Ranjha",filepath:"/song/_ Heer Ranjha(PagalWorld.com.se).mp3" ,coverpath:"/covers/logo.png",timestamp:"05:34"},
-    {songIndex:1,songName:"Aacha Lage Se",filepath:"/song/Aacha Lage Se Raju Punjabi 128 Kbps.mp3" ,coverpath:"/covers/logo.png",timestamp:"05:34"},
-    {songIndex:2,songName:"Abdul Hannan & Rovalio - Iraaday",filepath:"/song/Abdul Hannan & Rovalio - Iraaday (Official Music Video).mp3" ,coverpath:"/covers/logo.png",timestamp:"05:34"},
-    {songIndex:3,songName:"Ektarfa",filepath:"/song/Ektarfa(PagalWorld.com.se).mp3" ,coverpath:"/covers/logo.png",timestamp:"05:34"}
+    {songIndex:0,songName:"_ Heer Ranjha",filepath:"song/_ Heer Ranjha(PagalWorld.com.se).mp3" ,coverpath:"/covers/logo.png",timestamp:"05:34"},
+    {songIndex:1,songName:"Aacha Lage Se",filepath:"song/Aacha Lage Se Raju Punjabi 128 Kbps.mp3" ,coverpath:"/covers/logo.png",timestamp:"05:34"},
+    {songIndex:2,songName:"Abdul Hannan & Rovalio - Iraaday",filepath:"song/Abdul Hannan & Rovalio - Iraaday (Official Music Video).mp3" ,coverpath:"/covers/logo.png",timestamp:"05:34"},
+    {songIndex:3,songName:"Ektarfa",filepath:"song/Ektarfa(PagalWorld.com.se).mp3" ,coverpath:"/covers/logo.png",timestamp:"05:34"}
 ]
 
 //adding list of songs to html file or in frontend
