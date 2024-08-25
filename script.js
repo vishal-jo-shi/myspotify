@@ -36,7 +36,7 @@ songs.forEach((element)=>{
     Array.from(siC).forEach((container) => {
         container.innerHTML +=
                 `<div class="songitem">
-                    <img  src="${element.coverpath}" alt="${element.coverpath}">
+                    <img  src="${element.coverpath}" alt="${element.songIndex}">
                     <span class="songName${element.songIndex}" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;display: block;">${element.songName}</span>
                     <span class="songItemPlay"><span class="timestamp">${element.timestamp}<i id="${element.songIndex}" class="far music fa-play-circle"></i></span></span>
                 </div>`;
