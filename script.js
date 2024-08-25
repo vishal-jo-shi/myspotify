@@ -7,7 +7,7 @@ let gif=document.getElementById('gif');
 let songItem=Array.from(document.getElementsByClassName('songitem'));
 
 let songs=[
-    {songIndex:0,songName:"Aacha Lage Se",filepath:"song/AachaLageSe.mp3" ,coverpath:"../../covers/AachaLageSe.jpeg",timestamp:"04:47"},
+    {songIndex:0,songName:"Aacha Lage Se",filepath:"song/AachaLageSe.mp3" ,coverpath:"../covers/AachaLageSe.jpeg",timestamp:"04:47"},
     {songIndex:1,songName:"Ami Tomake",filepath:"song/AmiTomake.mp3" ,coverpath:"/covers/AmiTomake.jpeg",timestamp:"03:19"},
     {songIndex:2,songName:"Bijlee Bijlee",filepath:"song/BijleeBijlee.mp3" ,coverpath:"/covers/BijleeBijlee.jpeg",timestamp:"02:48"},
     {songIndex:3,songName:"Despacito",filepath:"song/Despacito.mp3" ,coverpath:"/covers/Despacito.jpeg",timestamp:"04:41"},
