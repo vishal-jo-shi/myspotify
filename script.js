@@ -109,6 +109,9 @@ audioElement.addEventListener('timeupdate',()=>{
         // gif.style.opacity=1;
         masterplay.classList.remove('fa-play-circle');
         masterplay.classList.add('fa-pause-circle');
+        makeAllUnMarque();
+        makecurrMarque();
+        makeMPMarque();
     }
 })
 
