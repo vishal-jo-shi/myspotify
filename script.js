@@ -1,33 +1,35 @@
 // console.log("hello world")
 let curIdx=0;
 let audioElement=new Audio('/song/_ Heer Ranjha(PagalWorld.com.se).mp3');
+audioElement.volume=0.3;
 let masterplay=document.getElementById('masterPlay');
 let myProgressBar=document.getElementById('myProgressBar');
+let mySpeaker=document.getElementById('mySpeaker');
 let gif=document.getElementById('gif');
 let songItem=Array.from(document.getElementsByClassName('songitem'));
 
 let songs=[
-    {songIndex:0,songName:"Aacha Lage Se",filepath:"song/AachaLageSe.mp3" ,coverpath:"covers/AachaLageSe.jpeg",timestamp:"04:47"},
-    {songIndex:1,songName:"Ami Tomake",filepath:"song/AmiTomake.mp3" ,coverpath:"covers/AmiTomake.jpeg",timestamp:"03:19"},
-    {songIndex:2,songName:"Bijlee Bijlee",filepath:"song/BijleeBijlee.mp3" ,coverpath:"covers/BijleeBijlee.jpeg",timestamp:"02:48"},
-    {songIndex:3,songName:"Despacito",filepath:"song/Despacito.mp3" ,coverpath:"covers/Despacito.jpeg",timestamp:"04:41"},
-    {songIndex:4,songName:"Ek Jeep Khadi Meri Thane Te",filepath:"song/EkJeepKhadiMeriThaneTe.mp3" ,coverpath:"covers/EkJeepKhadiMeriThaneTe.jpeg",timestamp:"2:14"},
-    {songIndex:5,songName:"Ektarfa",filepath:"song/Ektarfa.mp3" ,coverpath:"covers/Ektarfa.jpeg",timestamp:"04:01"},
-    {songIndex:6,songName:"ELEVATED",filepath:"song/ELEVATED.mp3" ,coverpath:"covers/ELEVATED.jpeg",timestamp:"03:20"},
-    {songIndex:7,songName:"Excuses",filepath:"song/Excuses.mp3" ,coverpath:"covers/Excuses.jpeg",timestamp:"02:56"},
-    {songIndex:8,songName:"Heer Ranjha",filepath:"song/HeerRanjha.mp3" ,coverpath:"covers/HeerRanjha.jpeg",timestamp:"03:43"},
-    {songIndex:9,songName:"Iraaday",filepath:"song/Iraaday.mp3" ,coverpath:"covers/Iraaday.jpeg",timestamp:"02:13"},
-    {songIndex:10,songName:"Jhaanjar",filepath:"song/Jhaanjar.mp3" ,coverpath:"covers/Jhaanjar.jpeg",timestamp:"03:55"},
-    {songIndex:11,songName:"Maan Meri Jaan",filepath:"song/MaanMeriJaan.mp3" ,coverpath:"covers/MaanMeriJaan.jpeg",timestamp:"03:14"},
-    {songIndex:12,songName:"Naah Lofi",filepath:"song/NaahLofi.mp3" ,coverpath:"covers/NaahLofi.jpeg",timestamp:"03:19"},
-    {songIndex:13,songName:"Ram Darshan",filepath:"song/RamDarshan.mp3" ,coverpath:"covers/RamDarshan.jpeg",timestamp:"05:09"},
-    {songIndex:14,songName:"Rooh",filepath:"song/Rooh.mp3" ,coverpath:"covers/Rooh.jpeg",timestamp:"03:28"},
-    {songIndex:15,songName:"Smile",filepath:"song/Smile.mp3" ,coverpath:"covers/Smile.jpeg",timestamp:"03:10"},
-    {songIndex:16,songName:"Sun Re Sun Beliya",filepath:"song/SunReSunBeliya.mp3" ,coverpath:"covers/SunReSunBeliya.jpeg",timestamp:"00:55"},
-    {songIndex:17,songName:"Tere Te",filepath:"song/TereTe.mp3" ,coverpath:"covers/TereTe.jpeg",timestamp:"01:59"},
-    {songIndex:18,songName:"Tu Chodiyon Na",filepath:"song/TuChodiyonNa.mp3" ,coverpath:"covers/TuChodiyonNa.jpeg",timestamp:"03:33"},
-    {songIndex:19,songName:"Tu Hai To Mujhe Phir Aur Kya Chahiye",filepath:"song/TuHaiToMujhePhirAurKyaChahiye.mp3" ,coverpath:"covers/TuHaiToMujhePhirAurKyaChahiye.jpeg",timestamp:"04:26"},
-    {songIndex:20,songName:"Zara Zara",filepath:"song/ZaraZara.mp3" ,coverpath:"covers/ZaraZara.jpeg",timestamp:"04:25"}
+    {songIndex:0,songName:"Aacha Lage Se",filepath:"song/AachaLageSe.mp3" ,coverpath:"/covers/AachaLageSe.jpeg",timestamp:"04:47"},
+    {songIndex:1,songName:"Ami Tomake",filepath:"song/AmiTomake.mp3" ,coverpath:"/covers/AmiTomake.jpeg",timestamp:"03:19"},
+    {songIndex:2,songName:"Bijlee Bijlee",filepath:"song/BijleeBijlee.mp3" ,coverpath:"/covers/BijleeBijlee.jpeg",timestamp:"02:48"},
+    {songIndex:3,songName:"Despacito",filepath:"song/Despacito.mp3" ,coverpath:"/covers/Despacito.jpeg",timestamp:"04:41"},
+    {songIndex:4,songName:"Ek Jeep Khadi Meri Thane Te",filepath:"/song/EkJeepKhadiMeriThaneTe.mp3" ,coverpath:"/covers/EkJeepKhadiMeriThaneTe.jpeg",timestamp:"2:14"},
+    {songIndex:5,songName:"Ektarfa",filepath:"/song/Ektarfa.mp3" ,coverpath:"/covers/Ektarfa.jpeg",timestamp:"04:01"},
+    {songIndex:6,songName:"ELEVATED",filepath:"/song/ELEVATED.mp3" ,coverpath:"/covers/ELEVATED.jpeg",timestamp:"03:20"},
+    {songIndex:7,songName:"Excuses",filepath:"/song/Excuses.mp3" ,coverpath:"/covers/Excuses.jpeg",timestamp:"02:56"},
+    {songIndex:8,songName:"Heer Ranjha",filepath:"/song/HeerRanjha.mp3" ,coverpath:"/covers/HeerRanjha.jpeg",timestamp:"03:43"},
+    {songIndex:9,songName:"Iraaday",filepath:"/song/Iraaday.mp3" ,coverpath:"/covers/Iraaday.jpeg",timestamp:"02:13"},
+    {songIndex:10,songName:"Jhaanjar",filepath:"/song/Jhaanjar.mp3" ,coverpath:"/covers/Jhaanjar.jpeg",timestamp:"03:55"},
+    {songIndex:11,songName:"Maan Meri Jaan",filepath:"/song/MaanMeriJaan.mp3" ,coverpath:"/covers/MaanMeriJaan.jpeg",timestamp:"03:14"},
+    {songIndex:12,songName:"Naah Lofi",filepath:"/song/NaahLofi.mp3" ,coverpath:"/covers/NaahLofi.jpeg",timestamp:"03:19"},
+    {songIndex:13,songName:"Ram Darshan",filepath:"/song/RamDarshan.mp3" ,coverpath:"/covers/RamDarshan.jpeg",timestamp:"05:09"},
+    {songIndex:14,songName:"Rooh",filepath:"/song/Rooh.mp3" ,coverpath:"/covers/Rooh.jpeg",timestamp:"03:28"},
+    {songIndex:15,songName:"Smile",filepath:"/song/Smile.mp3" ,coverpath:"/covers/Smile.jpeg",timestamp:"03:10"},
+    {songIndex:16,songName:"Sun Re Sun Beliya",filepath:"/song/SunReSunBeliya.mp3" ,coverpath:"/covers/SunReSunBeliya.jpeg",timestamp:"00:55"},
+    {songIndex:17,songName:"Tere Te",filepath:"/song/TereTe.mp3" ,coverpath:"/covers/TereTe.jpeg",timestamp:"01:59"},
+    {songIndex:18,songName:"Tu Chodiyon Na",filepath:"song/TuChodiyonNa.mp3" ,coverpath:"/covers/TuChodiyonNa.jpeg",timestamp:"03:33"},
+    {songIndex:19,songName:"Tu Hai To Mujhe Phir Aur Kya Chahiye",filepath:"/song/TuHaiToMujhePhirAurKyaChahiye.mp3" ,coverpath:"/covers/TuHaiToMujhePhirAurKyaChahiye.jpeg",timestamp:"04:26"},
+    {songIndex:20,songName:"Zara Zara",filepath:"/song/ZaraZara.mp3" ,coverpath:"/covers/ZaraZara.jpeg",timestamp:"04:25"}
 ]
 
 //adding list of songs to html file or in frontend
@@ -195,7 +197,10 @@ Array.from(document.getElementsByClassName('music')).forEach((element)=>{
         audioElement.play();
         Array.from(document.getElementsByClassName('bottom')).forEach((bottomElement) => {
             bottomElement.style.display = '';
-        });        
+        });   
+        Array.from(document.getElementsByClassName('speaker')).forEach((bottomElement) => {
+            bottomElement.style.display = '';
+        });      
         // gif.style.opacity=1;
         masterplay.classList.remove('fa-play-circle');
         masterplay.classList.add('fa-pause-circle');
@@ -260,6 +265,8 @@ cross=document.getElementsByClassName('cross');
 cross[0].addEventListener('click',()=>{
     bottom=document.getElementsByClassName('bottom');
     bottom[0].style.display='none';
+    speaker=document.getElementsByClassName('speaker');
+    speaker[0].style.display = 'none';
     makeAllPlays();
     audioElement.pause();
     masterplay.classList.remove('fa-pause-circle');
@@ -290,3 +297,112 @@ function handleMediaChange(e) {
     }
 }
 mediaQuery.addEventListener('change', handleMediaChange);
+
+
+//extra spacebar event
+addEventListener("keydown", (event) => {
+    if(event.key==' '){
+        if(audioElement.paused || audioElement.currentTime<=0){
+            audioElement.play();
+            masterplay.classList.remove('fa-play-circle');
+            masterplay.classList.add('fa-pause-circle');
+            // gif.style.opacity=1;
+            document.getElementById(curIdx).classList.add('fa-pause-circle');
+            document.getElementById(curIdx).classList.remove('fa-play-circle');
+            makeMPMarque();
+            makecurrMarque();
+        }
+        else{
+            makeAllPlays();
+            audioElement.pause();
+            masterplay.classList.remove('fa-pause-circle');
+            masterplay.classList.add('fa-play-circle');
+            // gif.style.opacity=0;
+            document.getElementById(curIdx).classList.remove('fa-pause-circle');
+            document.getElementById(curIdx).classList.add('fa-play-circle');
+            makeMPUnMarque();
+            makeAllUnMarque();
+        }
+    }
+});
+
+//left arrow event
+addEventListener("keydown", (event) => {
+    if(event.key=='ArrowLeft'){
+        if(curIdx<=0){
+            curIdx=songs.length-1;
+        }else{
+            curIdx--;
+        }
+            audioElement.src=songs[curIdx].filepath;
+            audioElement.currentTime=0;
+            audioElement.play();
+            Array.from(document.getElementsByClassName('masterPlaysongName')).forEach((songNameElement) => {
+                songNameElement.innerText = songs[curIdx].songName;
+            }); 
+            // gif.style.opacity=1;
+            makeAllPlays();
+            masterplay.classList.remove('fa-play-circle');
+            masterplay.classList.add('fa-pause-circle');
+            document.getElementById(curIdx).classList.remove('fa-play-circle');
+            document.getElementById(curIdx).classList.add('fa-pause-circle');
+            makeAllUnMarque();
+            makeMPMarque();
+            makecurrMarque();
+    }
+});
+
+//right arrow
+addEventListener("keydown", (event) => {
+    if(event.key=='ArrowRight'){
+        if(curIdx>=songs.length-1){
+            curIdx=0;
+        }else{
+            curIdx++;
+        }
+        audioElement.src=songs[curIdx].filepath;
+            audioElement.currentTime=0;
+            audioElement.play();
+            Array.from(document.getElementsByClassName('masterPlaysongName')).forEach((songNameElement) => {
+                songNameElement.innerText = songs[curIdx].songName;
+            }); 
+            // gif.style.opacity=1;
+            makeAllPlays();
+            masterplay.classList.remove('fa-play-circle');
+            masterplay.classList.add('fa-pause-circle');
+            document.getElementById(curIdx).classList.remove('fa-play-circle');
+            document.getElementById(curIdx).classList.add('fa-pause-circle')
+            makeAllUnMarque();
+            makeMPMarque();
+            makecurrMarque();
+    }
+});
+
+//speakers
+//volume up by arrowup key
+addEventListener("keydown", (event) => {
+    if(event.key=='ArrowUp'){
+        if(audioElement.volume!=1){
+            audioElement.volume+=0.1;
+            mySpeaker.value=audioElement.volume*10;
+        }
+    }
+});
+
+//volume down by arrow down key
+addEventListener("keydown", (event) => {
+    if(event.key=='ArrowDown'){
+        if(audioElement.volume!=0){
+            audioElement.volume-=0.1;
+            mySpeaker.value=audioElement.volume*10;
+        }
+    }
+});
+
+mySpeaker.addEventListener('change',()=>{
+    audioElement.volume=(mySpeaker.value)/10;
+})
+
+
+
+
