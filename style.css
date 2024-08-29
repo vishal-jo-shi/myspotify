@@ -49,7 +49,7 @@ nav ul li{
     width: 70%;
     border-radius: 12px;
     padding: 34px;
-    background-image: url('image/bg.jpeg');
+    background-image: url('./image/bg.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
@@ -146,7 +146,34 @@ nav ul li{
     border-radius: 50%; 
     cursor: pointer;
 }
+/* speakers */
+.speaker {
+    position: fixed;
+    height: 30px;
+    width: 20vw;
+    min-height: 20px;
+    min-width: 100px;
+    bottom: 7vh; 
+    left: 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
 
+.speaker input[type="range"] {
+    flex-grow: 1; 
+    margin-left: 5px;
+    max-width: calc(100% - 20px);
+}
+.fa-volume-high {
+    color: gray;
+}
+.fa-volume-xmark{
+    color: gray;
+}
+/* <i class="fa-solid fa-volume-xmark"></i> */
 @media (max-width: 620px) {
     .songList{
         min-width: 200px;
