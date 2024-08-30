@@ -169,10 +169,10 @@ nav ul li{
     max-width: calc(100% - 20px);
 }
 .fa-volume-high {
-    color: gray;
+    color: white;
 }
 .fa-volume-xmark{
-    color: gray;
+    color: white;
 }
 /* <i class="fa-solid fa-volume-xmark"></i> */
 @media (max-width: 620px) {
