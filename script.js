@@ -23,7 +23,7 @@ let songs=[
     {songIndex:11,songName:"Maan Meri Jaan",filepath:"song/MaanMeriJaan.mp3" ,coverpath:"covers/MaanMeriJaan.jpeg",timestamp:"03:14"},
     {songIndex:12,songName:"Naah Lofi",filepath:"song/NaahLofi.mp3" ,coverpath:"covers/NaahLofi.jpeg",timestamp:"03:19"},
     {songIndex:13,songName:"Ram Darshan",filepath:"song/RamDarshan.mp3" ,coverpath:"covers/RamDarshan.jpeg",timestamp:"05:09"},
-    {songIndex:14,songName:"Rooh",filepath:"song/Rooh.mp3" ,coverpath:"/overs/Rooh.jpeg",timestamp:"03:28"},
+    {songIndex:14,songName:"Rooh",filepath:"song/Rooh.mp3" ,coverpath:"covers/Rooh.jpeg",timestamp:"03:28"},
     {songIndex:15,songName:"Smile",filepath:"song/Smile.mp3" ,coverpath:"covers/Smile.jpeg",timestamp:"03:10"},
     {songIndex:16,songName:"Sun Re Sun Beliya",filepath:"song/SunReSunBeliya.mp3" ,coverpath:"covers/SunReSunBeliya.jpeg",timestamp:"00:55"},
     {songIndex:17,songName:"Tere Te",filepath:"song/TereTe.mp3" ,coverpath:"covers/TereTe.jpeg",timestamp:"01:59"},
